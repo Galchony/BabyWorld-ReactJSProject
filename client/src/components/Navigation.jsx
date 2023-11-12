@@ -1,4 +1,6 @@
-export default function Navigation(props) {
+import styles from './Navigation.module.css';
+
+export default function Navigation() {
   return (
     <>
       <section id="stuck_container">
@@ -12,6 +14,9 @@ export default function Navigation(props) {
                   </li>
                   <li>
                     <a href="/catalog">Catalog</a>
+                  </li>
+                  <li>
+                    <a href="/create">Create Post</a>
                   </li>
                   <li>
                     <a href="/profile">Profile</a>

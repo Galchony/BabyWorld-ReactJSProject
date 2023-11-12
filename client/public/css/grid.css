@@ -1,4 +1,7 @@
-
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
 body,
 div,
@@ -80,7 +83,7 @@ time,
 mark,
 audio,
 video {
-  margin: 10;
+  margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -134,7 +137,21 @@ table {
 }
 .clearfix:after {
   clear: both;
-}
+}/*
+  Variable Grid System.
+  Learn more ~ http://www.spry-soft.com/grids/
+  Based on 960 Grid System - http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
 
 body {
   min-width: 1200px;

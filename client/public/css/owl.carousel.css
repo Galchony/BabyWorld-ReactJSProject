@@ -85,8 +85,3 @@
 #owl .owl-prev:hover {
 	opacity: 0.5;
 }
-.owl-carousel {
-	-ms-touch-action: none;
-	touch-action: none;
-	}
-
