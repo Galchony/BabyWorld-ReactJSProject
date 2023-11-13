@@ -5,7 +5,7 @@ import * as postService from "../services/postService";
 
 import styles from "./Create.module.css";
 
-function Create() {
+export default function Create() {
   const navigate = useNavigate();
 
   const [values, setValues] = useState({
@@ -73,4 +73,4 @@ function Create() {
   );
 }
 
-export default Create;
+

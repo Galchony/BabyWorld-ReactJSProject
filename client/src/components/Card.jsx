@@ -4,7 +4,7 @@ import {  Link } from "react-router-dom";
 
 import styles from "./Card.module.css";
 
-function CardItem({
+export default function CardItem({
   _id,
   title,
   author,
@@ -37,4 +37,3 @@ function CardItem({
   );
 }
 
-export default CardItem;
