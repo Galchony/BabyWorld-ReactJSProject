@@ -24,6 +24,7 @@ function App() {
   const onLogoutClickHandler = () => {
     userService.logout()
     .catch((err) => console.log(err));
+    navigate("/");
 
   };
 
@@ -41,7 +42,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/details/:postId" element={<Details />} />
+          <Route path="/postDetails/:postId" element={<Details />} />
           <Route
             path="/login"
             element={<Login onLogin={onLoginClickHandler} />}

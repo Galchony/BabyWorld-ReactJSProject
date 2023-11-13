@@ -27,7 +27,7 @@ function CardItem({
         {/* <Card.Text>{description}</Card.Text> */}
       </Card.Body>
       <Card.Body>
-        <Link className={styles.psw} to={"/details/"+_id} >Details</Link>
+        <Link className={styles.psw} to={`/postDetails/${_id}`} >Details</Link>
         <br />
         <h4>
           {author}, {createdAt}

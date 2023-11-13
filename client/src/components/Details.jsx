@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import * as postService from "../services/postService";
 
 import styles from "./Details.module.css";
 
-
 export default function Details() {
+  const navigate = useNavigate();
   const { postId } = useParams();
   const [post, setPost] = useState({});
 
   useEffect(() => {
-    postService.getOne(postId).then((result) => setPost(result));
+    postService.getOne(postId).then((result) => setPost(result)).catch(err=>console.log(err));
   }, [postId]);
+
+  const onDeleteHandler = async () => {
+    await postService.remove(post._id).catch(err=>console.log(err));
+    navigate("/catalog");
+  };
 
   return (
     <section>
@@ -26,7 +31,13 @@ export default function Details() {
       <p>{post.description}</p>
 
       <div className={styles.container}>
-      <button type="button" className={styles.buttons}>Delete</button>
+        <button
+          type="button"
+          className={styles.buttons}
+          onClick={onDeleteHandler}
+        >
+          Delete
+        </button>
       </div>
     </section>
   );

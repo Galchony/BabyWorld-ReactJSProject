@@ -29,11 +29,16 @@ export const getOne = async (postId) => {
   return result;
 };
 
-// export const remove = async (userId) => {
-//   await fetch(`${baseUrl}/${userId}`, {
-//     method: "DELETE",
-//   });
-// };
+export const remove = async (postId) => {
+  const token = sessionStorage.getItem("token");
+  await fetch(`${baseUrl}/${postId}`, {
+    headers:{
+      "X-Authorization": token,
+    },
+    method: "DELETE",
+  });
+  ;
+};
 
 export const create = async (data) => {
   const body = {
