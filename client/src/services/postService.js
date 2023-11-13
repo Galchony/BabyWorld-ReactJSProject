@@ -1,20 +1,5 @@
 const baseUrl = "http://localhost:3030/data/posts";
 
-// export const firstCommit = async (body) => {
-//   const token = sessionStorage.getItem("token");
-//   const response = await fetch(baseUrl, {
-//     headers: {
-//       "Content-Type": "application/json",
-//       "X-Authorization": token,
-//     },
-//     method: "POST",
-//     body: JSON.stringify(body),
-//   });
-//   const result = await response.json();
-
-//   return result;
-// };
-
 export const getAll = async () => {
   const response = await fetch(baseUrl);
   const result = await response.json();
@@ -27,16 +12,6 @@ export const getOne = async (postId) => {
   const result = await response.json();
 
   return result;
-};
-
-export const remove = async (postId) => {
-  const token = sessionStorage.getItem("token");
-  await fetch(`${baseUrl}/${postId}`, {
-    headers: {
-      "X-Authorization": token,
-    },
-    method: "DELETE",
-  });
 };
 
 export const create = async (data) => {
@@ -60,4 +35,14 @@ export const create = async (data) => {
   const result = await response.json();
 
   return result;
+};
+
+export const remove = async (postId) => {
+  const token = sessionStorage.getItem("token");
+  await fetch(`${baseUrl}/${postId}`, {
+    headers: {
+      "X-Authorization": token,
+    },
+    method: "DELETE",
+  });
 };

@@ -28,49 +28,49 @@ export default function Create() {
   };
 
   return (
-    <form method="POST" onSubmit={onLoginClickHandler}>
-      <div className={styles.container}>
-        <h1>Create Your Post Here</h1>
+    <section id="create">
+      <form method="POST" onSubmit={onLoginClickHandler}>
+        <div className={styles.container}>
+          <h1>Create Your Post Here</h1>
 
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          placeholder="Title"
-          name="title"
-          onChange={onChangeHandler}
-          value={values.title}
-        />
-        <label htmlFor="category">Category</label>
-        <input
-          type="text"
-          placeholder="Category"
-          name="category"
-          onChange={onChangeHandler}
-          value={values.category}
-        />
-        <label htmlFor="imageUrl">Image</label>
-        <input
-          type="text"
-          name="imageUrl"
-          placeholder="Image"
-          onChange={onChangeHandler}
-          value={values.imageUrl}
-        />
-        <label htmlFor="description">Description</label>
-        <div>
-          <textarea
+          <label htmlFor="title">Title</label>
+          <input
             type="text"
-            name="description"
-            placeholder="Description"
+            placeholder="Title"
+            name="title"
             onChange={onChangeHandler}
-            value={values.description}
+            value={values.title}
           />
-        </div>
+          <label htmlFor="category">Category</label>
+          <input
+            type="text"
+            placeholder="Category"
+            name="category"
+            onChange={onChangeHandler}
+            value={values.category}
+          />
+          <label htmlFor="imageUrl">Image</label>
+          <input
+            type="text"
+            name="imageUrl"
+            placeholder="Image"
+            onChange={onChangeHandler}
+            value={values.imageUrl}
+          />
+          <label htmlFor="description">Description</label>
+          <div>
+            <textarea
+              type="text"
+              name="description"
+              placeholder="Description"
+              onChange={onChangeHandler}
+              value={values.description}
+            />
+          </div>
 
-        <button type="submit">Create Post</button>
-      </div>
-    </form>
+          <button type="submit">Create Post</button>
+        </div>
+      </form>
+    </section>
   );
 }
-
-

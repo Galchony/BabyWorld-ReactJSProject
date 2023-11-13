@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
-import {  Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 import styles from "./Card.module.css";
 
@@ -27,7 +26,9 @@ export default function CardItem({
         {/* <Card.Text>{description}</Card.Text> */}
       </Card.Body>
       <Card.Body>
-        <Link className={styles.psw} to={`/postDetails/${_id}`} >Details</Link>
+        <Link className={styles.psw} to={`/postDetails/${_id}`}>
+          Details
+        </Link>
         <br />
         <h4>
           {author}, {createdAt}
@@ -36,4 +37,3 @@ export default function CardItem({
     </Card>
   );
 }
-

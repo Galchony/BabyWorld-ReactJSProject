@@ -1,9 +1,10 @@
 import styles from "./Home.module.css";
 
-import * as postService from "../services/postService";
-import * as userService from "../services/userService";
+import * as postService from "../../services/postService";
+import * as userService from "../../services/userService";
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   // const data = {
@@ -18,37 +19,37 @@ export default function Home() {
   // };
 
   return (
-    <>
+    <section id="home">
       <div className={styles["container_12"]}>
         <div className={styles["grid_4"]}>
           <div className={styles.banner}>
-            <a href="/catalog" className={styles.banner_title}>
+            <Link to="/catalog" className={styles.banner_title}>
               Baby <br />
               Feeding
-            </a>
+            </Link>
             <div className="maxheight">
-              <img src="images/icon1.png" alt="" />
+              <img src="images/icon1.png" alt="Baby Feeding" />
             </div>
           </div>
         </div>
         <div className={styles["grid_4"]}>
           <div className={styles.banner}>
-            <a href="/catalog" className={styles.banner_title}>
+            <Link to="/catalog" className={styles.banner_title}>
               Baby <br />
               Speeling
-            </a>
+            </Link>
             <div className="maxheight">
-              <img src="images/icon2.png" alt="" />
+              <img src="images/icon2.png" alt="Baby Speeling" />
             </div>
           </div>
         </div>
         <div className={styles["grid_4"]}>
           <div className={styles.banner}>
-            <a  href="/catalog" className={styles.banner_title}>
+            <Link  to="/catalog" className={styles.banner_title}>
               Baby <br />
               Loving 
               
-            </a>
+            </Link>
             <div className="maxheight">
               <img src="images/icon3.png" alt="Baby Loving" />
             </div>
@@ -56,6 +57,6 @@ export default function Home() {
         </div>
         <div className={styles.clear} />
       </div>
-    </>
+    </section>
   );
 }

@@ -7,8 +7,8 @@ import styles from "./Details.module.css";
 
 export default function Details() {
   const navigate = useNavigate();
-  const { postId } = useParams();
   const [post, setPost] = useState({});
+  const { postId } = useParams();
 
   useEffect(() => {
     postService.getOne(postId).then((result) => setPost(result)).catch(err=>console.log(err));
@@ -23,7 +23,7 @@ export default function Details() {
     <section>
       <h1>Post Details</h1>
       <div>
-        <img src={post.imageUrl} />
+        <img src={post.imageUrl} alt={post.title} />
         <h3 className={styles.title}> {post.title}</h3>
         <p>Category: {post.category}</p>
       </div>

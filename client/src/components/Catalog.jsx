@@ -21,7 +21,6 @@ export default function Catalog(props) {
   // };
   
   const [posts, setPosts] = useState([]);
-  // const [token, setToken] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

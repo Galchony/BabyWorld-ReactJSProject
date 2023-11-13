@@ -1,16 +1,16 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 import * as userService from "./services/userService";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Catalog from "./components/Catalog";
 import Profile from "./components/Profile";
 import Create from "./components/Create";
 import Details from "./components/Details";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Register from "./components/Register";
 import Logout from "./components/Logout";
 
@@ -52,7 +52,6 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <a href="#" id="toTop" className="fa fa-angle-up" />
     </>
   );
 }

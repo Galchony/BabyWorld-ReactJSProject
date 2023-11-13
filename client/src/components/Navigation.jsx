@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 export default function Navigation() {
@@ -10,25 +11,25 @@ export default function Navigation() {
               <nav>
                 <ul className="sf-menu">
                   <li className="current">
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href="/catalog">Catalog</a>
+                    <Link to="/catalog">Catalog</Link>
                   </li>
                   <li>
-                    <a href="/create">Create Post</a>
+                    <Link to="/create">Create Post</Link>
                   </li>
                   <li>
-                    <a href="/profile">Profile</a>
+                    <Link to="/profile">Profile</Link>
                   </li>
                   <li>
-                    <a href="/login">Login</a>
+                    <Link to="/login">Login</Link>
                   </li>
                   <li>
-                    <a href="/register">Register</a>
+                    <Link to="/register">Register</Link>
                   </li>
                   <li>
-                    <a href="/logout">Logout</a>
+                    <Link to="/logout">Logout</Link>
                   </li>
                 </ul>
               </nav>
