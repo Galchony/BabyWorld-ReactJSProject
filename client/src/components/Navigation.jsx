@@ -1,4 +1,4 @@
-import styles from './Navigation.module.css';
+import styles from "./Navigation.module.css";
 
 export default function Navigation() {
   return (
@@ -26,6 +26,9 @@ export default function Navigation() {
                   </li>
                   <li>
                     <a href="/register">Register</a>
+                  </li>
+                  <li>
+                    <a href="/logout">Logout</a>
                   </li>
                 </ul>
               </nav>

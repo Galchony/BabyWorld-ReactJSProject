@@ -1,17 +1,39 @@
+import { useState } from "react";
 import styles from "./Login.module.css";
 
-export default function Login() {
+export default function Login({ onLogin }) {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const onChangeHandler = (e) => {
+    setValues((state) => ({ ...state, [e.target.name]: e.target.value }));
+  };
+
+  const onClick = (e) => {
+    e.preventDefault();
+    onLogin(values);
+  };
+
   return (
-    <form method="post">
+    <form method="post" onSubmit={onClick}>
       <div className={styles.imgcontainer}>
         <img src="images/welcome.png" alt="Avatar" className={styles.avatar} />
       </div>
 
       <div className={styles.container}>
-        <label htmlFor="uname">
+        <label htmlFor="email">
           <b>Username</b>
         </label>
-        <input type="text" placeholder="Enter Username" name="uname" required />
+        <input
+          type="text"
+          placeholder="Enter email"
+          name="email"
+          value={values.email}
+          onChange={onChangeHandler}
+          required
+        />
 
         <label htmlFor="psw">
           <div>Password</div>
@@ -19,7 +41,9 @@ export default function Login() {
         <input
           type="password"
           placeholder="Enter Password"
-          name="psw"
+          name="password"
+          value={values.password}
+          onChange={onChangeHandler}
           required
         />
         <div>

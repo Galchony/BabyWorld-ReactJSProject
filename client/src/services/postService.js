@@ -1,20 +1,33 @@
-const baseUrl = "http://localhost:3030/jsonstore/posts";
+const baseUrl = "http://localhost:3030/data/posts";
+
+// export const firstCommit = async (body) => {
+//   const token = sessionStorage.getItem("token");
+//   const response = await fetch(baseUrl, {
+//     headers: {
+//       "Content-Type": "application/json",
+//       "X-Authorization": token,
+//     },
+//     method: "POST",
+//     body: JSON.stringify(body),
+//   });
+//   const result = await response.json();
+
+//   return result;
+// };
 
 export const getAll = async () => {
   const response = await fetch(baseUrl);
   const result = await response.json();
 
-  const data = Object.values(result);
-
-  return data;
+  return result;
 };
 
-// export const getOne = async (userId) => {
-//   const response = await fetch(`${baseUrl}/${userId}`);
-//   const result = await response.json();
+export const getOne = async (postId) => {
+  const response = await fetch(`${baseUrl}/${postId}`);
+  const result = await response.json();
 
-//   return result;
-// };
+  return result;
+};
 
 // export const remove = async (userId) => {
 //   await fetch(`${baseUrl}/${userId}`, {
@@ -24,27 +37,24 @@ export const getAll = async () => {
 
 export const create = async (data) => {
   const body = {
-    firstName: data.firstName,
-    lastName: data.lastName,
-    email: data.email,
-    phoneNumber: data.phoneNumber,
+    title: data.title,
+    author: data.author,
     imageUrl: data.imageUrl,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    address: {
-      country: data.country,
-      city: data.city,
-      street: data.street,
-      streetNumber: data.streetNumber,
-    },
+    createdAt: data.createdAt,
+    description: data.description,
   };
-  const response = await fetch(baseUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  const token = sessionStorage.getItem("token");
+  const response = await fetch(
+    "http://localhost:3030/jsonstore/collection/posts",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Authorization": token,
+      },
+      body: JSON.stringify(body),
+    }
+  );
   const result = await response.json();
   return result;
 };

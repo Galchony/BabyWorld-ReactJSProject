@@ -7,9 +7,8 @@
 }
 
 .card-conteiner {
-    background-color: #6b7494;
     padding: 30px 30px 30px 30px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100;
@@ -20,7 +19,7 @@
     width: 325px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow:hotpink;
     display: inline;
     margin: 20px;
 }
