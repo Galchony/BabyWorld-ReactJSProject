@@ -1,10 +1,17 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import * as postService from "../services/postService";
+
 import styles from "./Create.module.css";
 
 function Create() {
+  const navigate = useNavigate();
+
   const [values, setValues] = useState({
     title: "",
     category: "",
-    imageUrl,
+    imageUrl: "",
     author: sessionStorage.getItem("token"),
     createdAt: new Date(),
     description: "",
@@ -14,13 +21,14 @@ function Create() {
     setValues((state) => ({ ...state, [e.target.name]: e.target.value }));
   };
 
-  const onClick = (e) => {
+  const onLoginClickHandler = (e) => {
     e.preventDefault();
-    onLogin(values);
+    postService.create(values).catch((err) => console.log(err));
+    navigate("/catalog");
   };
 
   return (
-    <form method="POST" onSubmit={onClick}>
+    <form method="POST" onSubmit={onLoginClickHandler}>
       <div className={styles.container}>
         <h1>Create Your Post Here</h1>
 
@@ -31,7 +39,6 @@ function Create() {
           name="title"
           onChange={onChangeHandler}
           value={values.title}
-
         />
         <label htmlFor="category">Category</label>
         <input
@@ -40,7 +47,6 @@ function Create() {
           name="category"
           onChange={onChangeHandler}
           value={values.category}
-
         />
         <label htmlFor="imageUrl">Image</label>
         <input
@@ -49,7 +55,6 @@ function Create() {
           placeholder="Image"
           onChange={onChangeHandler}
           value={values.imageUrl}
-
         />
         <label htmlFor="description">Description</label>
         <div>
@@ -59,11 +64,10 @@ function Create() {
             placeholder="Description"
             onChange={onChangeHandler}
             value={values.description}
-
           />
         </div>
 
-        <button type="button">Create Post</button>
+        <button type="submit">Create Post</button>
       </div>
     </form>
   );

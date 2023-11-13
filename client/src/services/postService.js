@@ -32,34 +32,32 @@ export const getOne = async (postId) => {
 export const remove = async (postId) => {
   const token = sessionStorage.getItem("token");
   await fetch(`${baseUrl}/${postId}`, {
-    headers:{
+    headers: {
       "X-Authorization": token,
     },
     method: "DELETE",
   });
-  ;
 };
 
 export const create = async (data) => {
   const body = {
     title: data.title,
-    author: data.author,
+    category: data.category,
     imageUrl: data.imageUrl,
+    author: data.author,
     createdAt: data.createdAt,
     description: data.description,
   };
   const token = sessionStorage.getItem("token");
-  const response = await fetch(
-    "http://localhost:3030/jsonstore/collection/posts",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Authorization": token,
-      },
-      body: JSON.stringify(body),
-    }
-  );
+  const response = await fetch(baseUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Authorization": token,
+    },
+    body: JSON.stringify(body),
+  });
   const result = await response.json();
+
   return result;
 };
