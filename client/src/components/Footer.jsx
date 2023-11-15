@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="container_12">
         <div className="grid_12">
           <h1 className="logo">
-            <a href="index.html">BABY WORLD</a>
+            <Link to="/">BABY WORLD</Link>
           </h1>
           <div className="socials">
             <a href="https://twitter.com/search?q=%23babyworld&src=typed_query&f=top" className="fa fa-twitter" />

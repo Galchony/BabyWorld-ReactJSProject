@@ -11,7 +11,7 @@ import Profile from "./components/Profile";
 import Create from "./components/Create";
 import Details from "./components/Details";
 import Login from "./components/Login/Login";
-import Register from "./components/Register";
+import Register from "./components/Register/Register";
 import Logout from "./components/Logout";
 
 function App() {

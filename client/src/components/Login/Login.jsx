@@ -17,7 +17,7 @@ export default function Login({ onLogin }) {
   };
 
   return (
-    <section id="login">
+    <section id="login" className={styles.section}>
       <form method="post" onSubmit={onClick}>
         <div className={styles.imgcontainer}>
           <img
@@ -29,7 +29,7 @@ export default function Login({ onLogin }) {
 
         <div className={styles.container}>
           <label htmlFor="email">
-            <b>Username</b>
+            <b>Email</b>
           </label>
           <input
             type="text"
@@ -45,7 +45,7 @@ export default function Login({ onLogin }) {
           </label>
           <input
             type="password"
-            placeholder="Enter Password"
+            placeholder="Enter password"
             name="password"
             value={values.password}
             onChange={onChangeHandler}

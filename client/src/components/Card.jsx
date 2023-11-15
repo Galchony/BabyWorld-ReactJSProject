@@ -16,9 +16,9 @@ export default function CardItem({
     <Card
       className=" text-white"
       border="dark"
-      style={{ width: "22rem", background: "#ec9e9e" }}
+      style={{ width: "22rem", background: "#ec9e9e" ,  "border-radius": "10%", }}
     >
-      <Card.Img variant="top" src={imageUrl} />
+      <Card.Img variant="top" style={{"border-radius": "10%"}} src={imageUrl} />
       <Card.Body>
         <h6>Category: {category}</h6>
         <Card.Title className="card-title">{title}</Card.Title>
