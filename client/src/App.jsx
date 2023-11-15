@@ -30,7 +30,6 @@ function App() {
   return (
     <>
       <link rel="stylesheet" href="css/owl.carousel.css" />
-      <link rel="stylesheet" href="css/camera.css" />
       <link rel="stylesheet" href="css/style.css" />
       <div>
         <Header  />

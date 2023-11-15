@@ -1,4 +1,3 @@
-import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 import styles from "./Card.module.css";
@@ -13,27 +12,29 @@ export default function CardItem({
   description,
 }) {
   return (
-    <Card
-      className=" text-white"
-      border="dark"
-      style={{ width: "22rem", background: "#ec9e9e" ,  "border-radius": "10%", }}
-    >
-      <Card.Img variant="top" style={{"border-radius": "10%"}} src={imageUrl} />
-      <Card.Body>
-        <h6>Category: {category}</h6>
-        <Card.Title className="card-title">{title}</Card.Title>
-        <br />
-        {/* <Card.Text>{description}</Card.Text> */}
-      </Card.Body>
-      <Card.Body>
-        <Link className={styles.psw} to={`/postDetails/${_id}`}>
-          Details
-        </Link>
-        <br />
-        <h4>
-          {author}, {createdAt}
-        </h4>
-      </Card.Body>
-    </Card>
+    <section>
+      <article
+        className={styles["card-conteiner"]}
+        style={{ background: "#ec9e9e" }}
+      >
+        <img className={styles["img"]} src={imageUrl} />
+        <div className={styles["card"]}>
+          <div className={styles["card-content"]}>
+            <h6>Category: {category}</h6>
+            <div className="card-title">{title}</div>
+            <br />
+          <div>
+            <Link className={styles.psw} to={`/postDetails/${_id}`}>
+              Details
+            </Link>
+            <br />
+            <h4>
+              {author}, {createdAt}
+            </h4>
+          </div>
+          </div>
+        </div>
+      </article>
+    </section>
   );
 }

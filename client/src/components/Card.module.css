@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+
+.card-conteiner {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    border-radius: 10%;
+
+}
+
+.card {
+    width: 70%;
+    border-radius: 10%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    background: "#ec9e9e";
+    border-color: black;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+
+}
+
+.card-content {
+    padding: 8px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+}

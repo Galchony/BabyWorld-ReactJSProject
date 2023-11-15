@@ -1,33 +1,39 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-
 }
 
-.card-conteiner {
-    padding: 30px 30px 30px 30px;
-    display: inline-flex;
+article {
+    box-sizing: border-box;
+    margin: 50px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.card-container {
+    padding: 30px;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100;
-
+    width: 300px;
+    box-sizing: border-box; 
 }
 
 .card {
-    width: 325px;
+    width: 200px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow:hotpink;
-    display: inline;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow size */
     margin: 20px;
 }
 
 .card img {
     width: 100%;
     height: auto;
-
 }
 
 .card-content {

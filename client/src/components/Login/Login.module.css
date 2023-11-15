@@ -1,19 +1,23 @@
 /* Bordered form */
+.section {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
 form {
   border-radius: 10%;
   border-color: #2e3548;
   background-color: #313c5a;
   border-radius: 20px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  display: block;
-  max-width: 70%;
-  margin: 50px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: auto;
   overflow: hidden;
-  width: 50px auto;
+  width: 60px auto;
   min-height: 210px;
   height: auto;
-  align-self: center;
-  
+
 }
 
 /* Full-width inputs */
@@ -63,6 +67,7 @@ img.avatar {
 /* Add padding to containers */
 .container {
   padding: 20px;
+  float: center;
   text-align: center;
 }
 
@@ -74,6 +79,5 @@ div.psw {
 
 label {
   color: white;
-  display: block;
 
 }

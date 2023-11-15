@@ -639,43 +639,6 @@ a.color1:hover {
 .white {
   color: #ffffff;
 }
-/****Map****/
-.map {
-  overflow: hidden;
-  padding-top: 14px;
-}
-.map figure {
-  position: relative;
-  display: block;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 45px;
-}
-.map figure iframe {
-  width: 100%;
-  height: 399px;
-  max-width: 100%;
-}
-.address1 {
-  display: block;
-  float: left;
-}
-.address1 + .address1 {
-  margin-left: 70px;
-}
-.address1 dt {
-  margin-bottom: 13px;
-}
-.address1 dd span {
-  min-width: 144px;
-  display: inline-block;
-  text-align: left;
-}
-.address1 dd span.col1 {
-  min-width: 0;
-}
 /**Footer**/
 #footer {
   text-align: center;
@@ -688,9 +651,7 @@ a.color1:hover {
 #footer h1 {
   padding-bottom: 47px;
 }
-#footer .footer_phone {
-  font-size: 24px;
-}
+
 #footer .sub-copy {
   padding-top: 51px;
 }
