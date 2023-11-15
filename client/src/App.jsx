@@ -1,15 +1,14 @@
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
 
 import * as userService from "./services/userService";
 
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import Catalog from "./components/Catalog";
-import Profile from "./components/Profile";
-import Create from "./components/Create";
-import Details from "./components/Details";
+import Catalog from "./components/PostCatalog/Catalog";
+import Profile from "./components/Profile/Profile";
+import Create from "./components/PostCreate/Create";
+import Details from "./components/PostDetails/Details";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Logout from "./components/Logout";

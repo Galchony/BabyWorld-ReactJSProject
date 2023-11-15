@@ -4,14 +4,14 @@ import styles from "./Navigation.module.css";
 export default function Navigation() {
   return (
     <>
-      <section id="stuck_container">
-        <div className="container_12">
-          <div className="grid_12">
+      <section id={styles["stuck_container"]} className={styles["navigation"]}>
+        <div className={styles["container_12"]}>
+          <div className={styles["grid_12"]}>
             <div className="navigation">
               <nav>
-                <ul className="sf-menu">
-                  <li className="current">
-                    <Link to="/">Home</Link>
+                <ul className={styles["sf-menu"]}>
+                  <li className={styles["current"]}>
+                    <Link  to="/">Home</Link>
                   </li>
                   <li>
                     <Link to="/catalog">Catalog</Link>
@@ -33,11 +33,11 @@ export default function Navigation() {
                   </li>
                 </ul>
               </nav>
-              <div className="clear" />
+              <div className={styles["clear"]} />
             </div>
-            <div className="clear" />
+            <div className={styles["clear"]} />
           </div>
-          <div className="clear" />
+          <div className={styles["clear"]} />
         </div>
       </section>
     </>

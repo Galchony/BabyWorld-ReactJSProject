@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import * as postService from "../services/postService";
+import * as postService from "../../services/postService";
 
 import styles from "./Details.module.css";
 
@@ -20,7 +20,7 @@ export default function Details() {
   };
 
   return (
-    <section>
+    <section id="details">
       <h1>Post Details</h1>
       <div>
         <img src={post.imageUrl} alt={post.title} />

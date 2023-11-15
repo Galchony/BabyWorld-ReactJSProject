@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-import * as postService from "../services/postService";
+import * as postService from "../../services/postService";
 
-import Post from "./Post";
-import Card from "./Card";
-import Spinner from "./Spinner";
+import Post from "../Post";
+import Card from "../Card";
+import Spinner from "../Spinner";
 import styles from "./Catalog.module.css";
 
 export default function Catalog(props) {
